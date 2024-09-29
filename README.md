@@ -1,4 +1,4 @@
-# Pr-sentation-du-Projet
+# Présentation-du-Projet
 Notre projet est :
 PhoneShop - Site de Vente de Téléphones, 
 Description :
