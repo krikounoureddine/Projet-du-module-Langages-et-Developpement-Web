@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats du Sondage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <h1>Résultats du Sondage - PhoneShop</h1>
+
+    <table id="resultatsTable">
+        <thead>
+            <tr>
+                <th>Horodateur</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date de naissance</th>
+                <th>Situation Personnel</th>
+                <th>Pays de résidence</th>
+                <th>Langues parlés</th>
+                <th>Avez-vous déjà utiliser un téléphone mobile ?</th>
+                <th>Marques de téléphones préférés</th>
+                <th>Budget</th>
+                <th>Intéressé par un site e-commerce sécurisé</th>
+                <th>Profil</th>
+                <th>Fonctionnalités désirées</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- To insert data here  -->
+        </tbody>
+    </table>
+
+    <script>
+        const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJUTGMx_CCc7HRTpeMI_xjbiai7pKM2llaTMbl3wvqvl2VswnHD9ny8Ou1e0NIa2Fyuri7Am-o2pLe/pub?output=csv";
+
+        // Function to teat de file csv 
+        async function fetchCSV() {
+            const response = await fetch(url);
+            const csvText = await response.text();
+            const data = d3.csvParse(csvText);
+            processCSV(data);
+        }
+
+        // Function to teat de file csv 
+        function processCSV(data) {
+            const tableBody = document.querySelector("#resultatsTable tbody");
+
+            data.forEach(row => {
+                const rowElement = document.createElement("tr");
+
+                /// create data of each colums
+                rowElement.innerHTML = `
+                    <td>${row["Horodateur"]}</td>
+                    <td>${row["Nom"]}</td>
+                    <td>${row["Prénom"]}</td>
+                    <td>${row["Date de naissance"]}</td>
+                    <td>${row["Situation Personnel"]}</td>
+                    <td>${row["Pays de résidence"]}</td>
+                    <td>${row["Langues parlés "]}</td>
+                    <td>${row["Avez-vous déjà utiliser un téléphone mobile ?"]}</td>
+                    <td>${row["Quelles sont vos marques de téléphones préférés ?"]}</td>
+                    <td>${row["Quel budgets déprécieriez vous pour l'achat d'un téléphone ?"]}</td>
+                    <td>${row["Seriez-vous intéressé par un site web sécurisé dédié au e-commerce de téléphones mobiles ? "]}</td>
+                    <td>${row["Vous avez le profil d'un :"]}</td>
+                    <td>${row["Fonctionnalités désirés :"]}</td>
+                `;
+                tableBody.appendChild(rowElement);
+            });
+        }
+
+        // call the function when the data is download
+        fetchCSV();
+    </script>
+</body>
+</html>
