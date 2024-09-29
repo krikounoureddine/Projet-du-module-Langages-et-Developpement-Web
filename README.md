@@ -18,4 +18,9 @@ PhoneShop est une plateforme en ligne dédiée à l'achat de téléphones mobile
 
 ### Design de pattern utilisé
 - **MVC (Modèle-Vue-Contrôleur)** : Ce design pattern permet de séparer la logique de l'application (Modèle), la présentation des données (Vue) et la gestion des interactions de l'utilisateur (Contrôleur).
+### Le lien du formulaire :
+    https://qrfy.io/r/kg8fbiJ5yG
+    
+ ### QR code du formulaire :
 
+ ![image alt](https://github.com/mokrani-islam/dsqdsq/blob/a05b8bfe64aa23514f2852c2d19e7daf0a5d1e05/Untitled.png)
