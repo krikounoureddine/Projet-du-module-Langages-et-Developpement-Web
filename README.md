@@ -16,4 +16,6 @@ PhoneShop est une plateforme en ligne dédiée à l'achat de téléphones mobile
 ### Fonctionnalités additionnelles
 - **Gestion des comptes acheteur et vendeur** : Créer une distinction entre les différents profils d'utilisateur pour assurer une séparation claire des fonctions.
 
+### Design de pattern utilisé
+- **MVC (Modèle-Vue-Contrôleur)** : Ce design pattern permet de séparer la logique de l'application (Modèle), la présentation des données (Vue) et la gestion des interactions de l'utilisateur (Contrôleur).
 
