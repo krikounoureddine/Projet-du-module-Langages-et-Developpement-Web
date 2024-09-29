@@ -1,7 +1,7 @@
 # Présentation du Projet
 
 ## PhoneShop - Site de Vente de Téléphones
-
+Présenter par krikou nourddine et mokrani islam
 ### Description
 PhoneShop est une plateforme en ligne dédiée à l'achat de téléphones mobiles et d'accessoires. Le site permet aux utilisateurs de parcourir un catalogue de produits, de filtrer les téléphones par marque et caractéristiques, et de passer des commandes en ligne.
 
