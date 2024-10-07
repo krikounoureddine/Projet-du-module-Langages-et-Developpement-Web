@@ -24,4 +24,4 @@ https://docs.google.com/forms/d/e/1FAIpQLScCpb0oUcjKjKOS3jqYVUL2JjcRk41NjudZenlL
 
  ### QR code du formulaire :
 
- ![image alt](https://github.com/mokrani-islam/dsqdsq/blob/a05b8bfe64aa23514f2852c2d19e7daf0a5d1e05/Untitled.png)
+ ![image alt](https://github.com/krikounoureddine/Projet-du-module-Langages-et-Developpement-Web/blob/main/qrcode.png)
