@@ -33,6 +33,7 @@
         <thead>
             <tr>
                 <th>Horodateur</th>
+                <th>email</th>
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Date de naissance</th>
@@ -45,7 +46,6 @@
                 <th>Intéressé par un site e-commerce sécurisé</th>
                 <th>Profil</th>
                 <th>Fonctionnalités désirées</th>
-                 <th>email</th>
                 
             </tr>
         </thead>
@@ -75,6 +75,7 @@
                 /// create data of each colums
                 rowElement.innerHTML = `
                     <td>${row["Horodateur"]}</td>
+                    <td>${row["email"]}</td>
                     <td>${row["Nom"]}</td>
                     <td>${row["Prénom"]}</td>
                     <td>${row["Date de naissance"]}</td>
@@ -87,7 +88,7 @@
                     <td>${row["Seriez-vous intéressé par un site web sécurisé dédié au e-commerce de téléphones mobiles ? "]}</td>
                     <td>${row["Vous avez le profil d'un :"]}</td>
                     <td>${row["Fonctionnalités désirés :"]}</td>
-                    <td>${row["email"]}</td>
+                    
                 `;
                 tableBody.appendChild(rowElement);
             });
