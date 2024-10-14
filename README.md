@@ -22,6 +22,10 @@ PhoneShop est une plateforme en ligne dédiée à l'achat de téléphones mobile
 
 https://docs.google.com/forms/d/e/1FAIpQLScCpb0oUcjKjKOS3jqYVUL2JjcRk41NjudZenlLXVeQymFDgw/viewform?usp=sf_link
 
+## Formulaire
+
+Pour remplir le formulaire, [cliquez ici](https://docs.google.com/forms/d/e/1FAIpQLScCpb0oUcjKjKOS3jqYVUL2JjcRk41NjudZenlLXVeQymFDgw/viewform?usp=sf_link).
+
  ### QR code du formulaire :
 
  ![image alt](https://github.com/krikounoureddine/Projet-du-module-Langages-et-Developpement-Web/blob/main/qrcode.png)
