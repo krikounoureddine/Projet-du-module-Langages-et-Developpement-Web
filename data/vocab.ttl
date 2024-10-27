@@ -1,0 +1,153 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix newphoneshop: <https://example.com/newphoneshop#> .
+
+# Définition de l'ontologie
+<https://example.com/newphoneshop> a rdf:Ontology ;
+    rdfs:comment "Ontologie pour le site e-commerce NewPhoneShop dédié à la vente de téléphones mobiles." ;
+    rdfs:label "Ontologie NewPhoneShop" .
+
+# Classes
+# Ajout de la classe Email
+newphoneshop:Email a rdfs:Class ;
+    rdfs:label "Email" ;
+    rdfs:comment "Classe représentant une adresse e-mail pour les utilisateurs de NewPhoneShop." .
+	
+newphoneshop:Horodateur a rdfs:Class ;
+    rdfs:label "Horodateur" ;
+    rdfs:comment "L'horodatage d'un enregistrement." .
+
+newphoneshop:Nom a rdfs:Class ;
+    rdfs:label "Nom" ;
+    rdfs:comment "Le nom de famille d'une personne." .
+
+newphoneshop:Prenom a rdfs:Class ;
+    rdfs:label "Prénom" ;
+    rdfs:comment "Le prénom d'une personne." .
+
+newphoneshop:DateDeNaissance a rdfs:Class ;
+    rdfs:label "Date de naissance" ;
+    rdfs:comment "La date de naissance d'une personne." .
+
+newphoneshop:SituationPersonnel a rdfs:Class ;
+    rdfs:label "Situation Personnelle" ;
+    rdfs:comment "La situation personnelle d'une personne (ex. : étudiant, employé)." .
+
+newphoneshop:PaysDeResidence a rdfs:Class ;
+    rdfs:label "Pays de résidence" ;
+    rdfs:comment "Le pays de résidence de la personne." .
+
+newphoneshop:LanguesParles a rdfs:Class ;
+    rdfs:label "Langues parlées" ;
+    rdfs:comment "Les langues parlées par une personne." .
+
+newphoneshop:UtilisationMobile a rdfs:Class ;
+    rdfs:label "Avez-vous déjà utilisé un téléphone mobile ?" ;
+    rdfs:comment "Indique si la personne a déjà utilisé un téléphone mobile." .
+
+newphoneshop:MarquesPreferes a rdfs:Class ;
+    rdfs:label "Marques de téléphones préférées" ;
+    rdfs:comment "Les marques de téléphones préférées d'une personne." .
+
+newphoneshop:BudgetAchat a rdfs:Class ;
+    rdfs:label "Budget pour l'achat d'un téléphone" ;
+    rdfs:comment "Le budget que la personne dédierait à l'achat d'un téléphone mobile." .
+
+newphoneshop:InteretSiteEcommerce a rdfs:Class ;
+    rdfs:label "Intérêt pour un site e-commerce sécurisé" ;
+    rdfs:comment "Indique si la personne est intéressée par un site e-commerce sécurisé pour les téléphones mobiles." .
+
+newphoneshop:ProfilUtilisateur a rdfs:Class ;
+    rdfs:label "Profil de l'utilisateur" ;
+    rdfs:comment "Le profil utilisateur basé sur ses préférences et son utilisation." .
+
+newphoneshop:FonctionnalitesDesires a rdfs:Class ;
+    rdfs:label "Fonctionnalités désirées" ;
+    rdfs:comment "Les fonctionnalités ou caractéristiques souhaitées pour un téléphone mobile." .
+
+# Propriétés
+# Propriété pour l'adresse e-mail
+newphoneshop:aPourEmail a rdf:Property ;
+    rdfs:label "a pour email" ;
+    rdfs:domain newphoneshop:Email ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Propriété indiquant l'adresse e-mail associée à un utilisateur." .
+	
+newphoneshop:aPourHorodateur a rdf:Property ;
+    rdfs:label "a pour horodateur" ;
+    rdfs:domain newphoneshop:Horodateur ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Lien vers l'horodatage de l'enregistrement." .
+
+newphoneshop:aPourNom a rdf:Property ;
+    rdfs:label "a pour nom" ;
+    rdfs:domain newphoneshop:Nom ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien vers le nom de famille d'une personne." .
+
+newphoneshop:aPourPrenom a rdf:Property ;
+    rdfs:label "a pour prénom" ;
+    rdfs:domain newphoneshop:Prenom ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien vers le prénom d'une personne." .
+
+newphoneshop:aPourDateDeNaissance a rdf:Property ;
+    rdfs:label "a pour date de naissance" ;
+    rdfs:domain newphoneshop:DateDeNaissance ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Lien vers la date de naissance d'une personne." .
+
+newphoneshop:aPourSituationPersonnel a rdf:Property ;
+    rdfs:label "a pour situation personnelle" ;
+    rdfs:domain newphoneshop:SituationPersonnel ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien vers la situation personnelle d'une personne." .
+
+newphoneshop:resideDans a rdf:Property ;
+    rdfs:label "réside dans" ;
+    rdfs:domain newphoneshop:PaysDeResidence ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien vers le pays où réside la personne." .
+
+newphoneshop:parleLangues a rdf:Property ;
+    rdfs:label "parle langues" ;
+    rdfs:domain newphoneshop:LanguesParles ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien vers les langues parlées par une personne." .
+
+newphoneshop:aUtiliseMobile a rdf:Property ;
+    rdfs:label "a utilisé un téléphone mobile" ;
+    rdfs:domain newphoneshop:UtilisationMobile ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Indique si la personne a déjà utilisé un téléphone mobile." .
+
+newphoneshop:prefereMarques a rdf:Property ;
+    rdfs:label "préfère marques" ;
+    rdfs:domain newphoneshop:MarquesPreferes ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien vers les marques de téléphones préférées." .
+
+newphoneshop:aPourBudget a rdf:Property ;
+    rdfs:label "a pour budget" ;
+    rdfs:domain newphoneshop:BudgetAchat ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Lien vers le budget alloué à l'achat de téléphone." .
+
+newphoneshop:estInteresséParEcommerce a rdf:Property ;
+    rdfs:label "est intéressé par e-commerce" ;
+    rdfs:domain newphoneshop:InteretSiteEcommerce ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Indique l'intérêt pour un site e-commerce sécurisé." .
+
+newphoneshop:aProfilUtilisateur a rdf:Property ;
+    rdfs:label "a profil utilisateur" ;
+    rdfs:domain newphoneshop:ProfilUtilisateur ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien vers le profil utilisateur." .
+
+newphoneshop:desireFonctionnalites a rdf:Property ;
+    rdfs:label "désire fonctionnalités" ;
+    rdfs:domain newphoneshop:FonctionnalitesDesires ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien vers les fonctionnalités souhaitées pour un téléphone." .
