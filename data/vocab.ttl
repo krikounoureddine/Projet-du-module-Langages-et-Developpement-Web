@@ -1,0 +1,240 @@
+@prefix ps: <https://example.com/phoneshop#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+
+# Definition de l'ontologie
+<https://example.com/phoneshop> a owl:Ontology ; 
+    rdfs:comment "Ontologie pour le site e-commerce PhoneShop dedie a la vente de telephones mobiles." ; 
+    rdfs:label "Ontologie Projet PhoneShop" . 
+
+### Classes
+ps:Utilisateur a owl:Class ; 
+    rdfs:label "Utilisateur" ; 
+    rdfs:comment "Represente une personne utilisant le site, soit acheteur soit vendeur." . 
+
+ps:Acheteur a owl:Class ; 
+    rdfs:subClassOf ps:Utilisateur ; 
+    rdfs:label "Acheteur" ; 
+    rdfs:comment "Utilisateur qui achete des produits sur le site." . 
+
+ps:Vendeur a owl:Class ; 
+    rdfs:subClassOf ps:Utilisateur ; 
+    rdfs:label "Vendeur" ; 
+    rdfs:comment "Utilisateur qui vend des produits sur le site." . 
+
+ps:Produit a owl:Class ; 
+    rdfs:label "Produit" ; 
+    rdfs:comment "Represente un produit disponible a la vente sur le site." . 
+
+ps:Telephone a owl:Class ; 
+    rdfs:subClassOf ps:Produit ; 
+    rdfs:label "Telephone" ; 
+    rdfs:comment "Represente un telephone mobile en tant que produit specifique." . 
+
+ps:Stock a owl:Class ; 
+    rdfs:label "Stock" ; 
+    rdfs:comment "Quantite de produits disponibles pour la vente." . 
+
+ps:Commande a owl:Class ; 
+    rdfs:label "Commande" ; 
+    rdfs:comment "Regroupe les details d'une transaction d'achat realisee par un acheteur." . 
+
+ps:Panier a owl:Class ; 
+    rdfs:label "Panier" ; 
+    rdfs:comment "Contient les produits selectionnes par un acheteur avant la commande." . 
+
+ps:Paiement a owl:Class ; 
+    rdfs:label "Paiement" ; 
+    rdfs:comment "Represente le paiement effectue pour une commande." . 
+
+ps:Livreaison a owl:Class ; 
+    rdfs:label "Livraison" ; 
+    rdfs:comment "Informations sur la livraison de la commande." . 
+
+ps:Avis a owl:Class ; 
+    rdfs:label "Avis" ; 
+    rdfs:comment "Feedback ou evaluation d'un produit par un acheteur." . 
+
+### Relations (Proprietes d'objet)
+ps:proposeProduit a owl:ObjectProperty ; 
+    rdfs:domain ps:Vendeur ; 
+    rdfs:range ps:Produit ; 
+    rdfs:label "propose produit" ; 
+    rdfs:comment "Indique qu'un vendeur propose un produit pour la vente." . 
+
+ps:possedePanier a owl:ObjectProperty ; 
+    rdfs:domain ps:Acheteur ; 
+    rdfs:range ps:Panier ; 
+    rdfs:label "possede panier" ; 
+    rdfs:comment "Associe un acheteur a son panier." . 
+
+ps:contientProduit a owl:ObjectProperty ; 
+    rdfs:domain ps:Panier ; 
+    rdfs:range ps:Produit ; 
+    rdfs:label "contient produit" ; 
+    rdfs:comment "Indique que le panier contient un produit." . 
+
+ps:aPourCommande a owl:ObjectProperty ; 
+    rdfs:domain ps:Acheteur ; 
+    rdfs:range ps:Commande ; 
+    rdfs:label "a pour commande" ; 
+    rdfs:comment "Associe un acheteur a une commande specifique." . 
+
+ps:appartientAStock a owl:ObjectProperty ; 
+    rdfs:domain ps:Produit ; 
+    rdfs:range ps:Stock ; 
+    rdfs:label "appartient a stock" ; 
+    rdfs:comment "Indique qu'un produit fait partie du stock disponible." . 
+
+ps:evalueProduit a owl:ObjectProperty ; 
+    rdfs:domain ps:Acheteur ; 
+    rdfs:range ps:Avis ; 
+    rdfs:label "evalue produit" ; 
+    rdfs:comment "Associe un acheteur a son avis sur un produit." . 
+
+ps:laisseAvis a owl:ObjectProperty ; 
+    rdfs:domain ps:Avis ; 
+    rdfs:range ps:Produit ; 
+    rdfs:label "laisse avis" ; 
+    rdfs:comment "Associe un avis a un produit specifique." . 
+
+ps:aPourLivraison a owl:ObjectProperty ; 
+    rdfs:domain ps:Commande ; 
+    rdfs:range ps:Livreaison ; 
+    rdfs:label "a pour livraison" ; 
+    rdfs:comment "Relie une commande a sa livraison." . 
+
+ps:reliePaiement a owl:ObjectProperty ; 
+    rdfs:domain ps:Paiement ; 
+    rdfs:range ps:Commande ; 
+    rdfs:label "relie paiement" ; 
+    rdfs:comment "Associe un paiement a une commande specifique." . 
+
+### Attributs (Proprietes de donnees)
+ps:ID_utilisateur a owl:DatatypeProperty ; 
+    rdfs:domain ps:Utilisateur ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "ID utilisateur" ; 
+    rdfs:comment "Identifiant unique pour chaque utilisateur." . 
+
+ps:Nom a owl:DatatypeProperty ; 
+    rdfs:domain ps:Utilisateur ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Nom" ; 
+    rdfs:comment "Nom complet de l'utilisateur." . 
+
+ps:Email a owl:DatatypeProperty ; 
+    rdfs:domain ps:Utilisateur ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Email" ; 
+    rdfs:comment "Adresse e-mail de l'utilisateur." . 
+
+ps:Type_utilisateur a owl:DatatypeProperty ; 
+    rdfs:domain ps:Utilisateur ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Type utilisateur" ; 
+    rdfs:comment "Indique si l'utilisateur est un acheteur ou un vendeur." . 
+
+ps:Adresse a owl:DatatypeProperty ; 
+    rdfs:domain ps:Utilisateur ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Adresse" ; 
+    rdfs:comment "Adresse de l'utilisateur." . 
+
+ps:Telephone a owl:DatatypeProperty ; 
+    rdfs:domain ps:Utilisateur ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Telephone" ; 
+    rdfs:comment "Numero de telephone de l'utilisateur." . 
+
+ps:ID_produit a owl:DatatypeProperty ; 
+    rdfs:domain ps:Produit ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "ID produit" ; 
+    rdfs:comment "Identifiant unique pour chaque produit." . 
+
+ps:Nom_produit a owl:DatatypeProperty ; 
+    rdfs:domain ps:Produit ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Nom produit" ; 
+    rdfs:comment "Nom du produit." . 
+
+ps:Marque a owl:DatatypeProperty ; 
+    rdfs:domain ps:Telephone ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Marque" ; 
+    rdfs:comment "Marque du telephone." . 
+
+ps:Prix a owl:DatatypeProperty ; 
+    rdfs:domain ps:Produit ; 
+    rdfs:range xsd:decimal ; 
+    rdfs:label "Prix" ; 
+    rdfs:comment "Prix du produit." . 
+
+ps:Description a owl:DatatypeProperty ; 
+    rdfs:domain ps:Produit ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Description" ; 
+    rdfs:comment "Description du produit." . 
+
+ps:Stock_quantite a owl:DatatypeProperty ; 
+    rdfs:domain ps:Stock ; 
+    rdfs:range xsd:integer ; 
+    rdfs:label "Quantite de stock" ; 
+    rdfs:comment "Quantite de produits disponibles en stock." . 
+
+ps:Modele a owl:DatatypeProperty ; 
+    rdfs:domain ps:Telephone ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Modele" ; 
+    rdfs:comment "Modele du telephone." . 
+
+ps:Systeme_exploitation a owl:DatatypeProperty ; 
+    rdfs:domain ps:Telephone ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Systeme d'exploitation" ; 
+    rdfs:comment "Systeme d'exploitation du telephone." . 
+
+ps:Date_commande a owl:DatatypeProperty ; 
+    rdfs:domain ps:Commande ; 
+    rdfs:range xsd:dateTime ; 
+    rdfs:label "Date de commande" ; 
+    rdfs:comment "Date a laquelle la commande a ete passe." . 
+
+ps:Statut_commande a owl:DatatypeProperty ; 
+    rdfs:domain ps:Commande ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Statut de commande" ; 
+    rdfs:comment "Statut actuel de la commande." . 
+
+ps:Montant_total a owl:DatatypeProperty ; 
+    rdfs:domain ps:Commande ; 
+    rdfs:range xsd:decimal ; 
+    rdfs:label "Montant total" ; 
+    rdfs:comment "Montant total de la commande." . 
+
+ps:Date_livraison a owl:DatatypeProperty ; 
+    rdfs:domain ps:Livreaison ; 
+    rdfs:range xsd:date ; 
+    rdfs:label "Date de livraison" ; 
+    rdfs:comment "Date a laquelle la livraison est prevue." . 
+
+ps:Commentaire_aavis a owl:DatatypeProperty ; 
+    rdfs:domain ps:Avis ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Commentaire" ; 
+    rdfs:comment "Commentaire ou retour d'un acheteur sur un produit." . 
+
+ps:Note a owl:DatatypeProperty ; 
+    rdfs:domain ps:Avis ; 
+    rdfs:range xsd:integer ; 
+    rdfs:label "Note" ; 
+    rdfs:comment "Note attribuee par l'acheteur a un produit, sur une echelle de 1 a 5." . 
+
+ps:Mode_de_paiement a owl:DatatypeProperty ; 
+    rdfs:domain ps:Paiement ; 
+    rdfs:range xsd:string ; 
+    rdfs:label "Mode de paiement" ; 
+    rdfs:comment "Type de paiement effectue pour la commande." . 
