@@ -1,8 +1,8 @@
 export const pa = {
     'navbar':d3.select('#navbarMain'),
-    mail:'krikounoureddine@gmail.com',
+    mail:'samuel.szoniecky@univ-paris8.fr',
     apiOmk:'http://localhost/omeka-s/api/',
-    ident: 'Wu2JU2niVUCKCVPlMtYNTkNYUZW6ehHg',
-    key:'1Y98gQN1FHYU84TNdGrGIZlx3iZz2JRt',
+    ident: '5CszKkvfng0NtZpXJgvJwFL0XAKLSyDA',
+    key:'83UbRmRHMexTpsfX3w4FNTPaXpSYqLXH',
     keyGitHub:''
 }
