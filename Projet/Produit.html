@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneShop</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./css/produit.css">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">PhoneShop</a>
+            </div>
+            <ul>
+                <li><a href="historiques.html">Historiques</a></li>
+                <li><a href="index.html" class="active">Collections</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <form action="{{ url_for('search') }}" method="POST" onsubmit="return validateInput()">
+               
+                <input type="text" name="query" id="search-input" placeholder="Rechercher..." maxlength="50" required>
+                <button type="button" id="voice-btn" onclick="startRecognition()">🎤</button>
+                <button type="submit" id="search-button">🔍</button>
+             
+            </form>
+        </div>
+    </header>
+    <div class="container">
+        <div id="augmented-reality-container" >
+            <div id="ar-canvas-container" style="display: block;"></div>
+          </div>
+        <div class="product-details">
+            <h1>Iphone Phone 14 128 Go - Minuit - Débloqué</h1>
+            <div>
+              <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>  <p>4,4/5 (3 627 avis)</p>
+              </div>
+            <p style="text-align: justify;">
+              515,00 €
+              749,00 € neuf
+              Économisez 234,00 €
+              Payer en 3 versements de 171,66 €, sans frais. En savoir plus
+            <button onclick="toggleBlur()">Flouter/Déflouter la carte</button> 
+            <div id="map" style="margin-bottom: 3%;"></div>
+        </div>
+       
+    </div>
+     
+       <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024  PhoneShop - All Rights Reserved</p>
+      <p>Contact us at <a href="mailto:contact@onlinestore.com">contact@onlinestore.com</a></p>
+    </div>
+  </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+   <script src="./javascript/maps.js"></script>
+   <script type="module" src="./javascript/ar.js"></script>
+</body>
+</html>
+
+
+    
+
+

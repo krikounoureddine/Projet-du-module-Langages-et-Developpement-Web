@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frise Chronologique</title>
+  <link rel="stylesheet" href="./css/historique.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="header"> 
+    <nav class="nav"> 
+        <div class="logo">
+            <a href="index.html"> PhoneShop</a>
+        </div>
+        <ul> 
+            <li><a href="historiques.html">Historiques</a></li>
+            <li><a href="index.html">Collections</a></li> 
+            <li><a href="contact.html">Contact</a></li>  
+        </ul> 
+    </nav> 
+    <div class="search-container">
+        <form action="{{ url_for('search') }}" method="POST" onsubmit="return validateInput()">
+           
+            <input type="text" name="query" id="search-input" placeholder="Rechercher..." maxlength="50" required>
+            <button type="button" id="voice-btn" onclick="startRecognition()">🎤</button>
+            <button type="submit" id="search-button">🔍</button>
+         
+        </form>
+    </div>
+</header> 
+
+  <div class="timeline">
+  
+    <div class="timeline-event">
+      <div class="event-circle">
+        <p style="text-align: center; margin-top: 25px; font-weight: bold;">2024</p>
+      </div>
+      <div class="event-content">
+        <h3>1971</h3>
+        <p>🏆 Coupe de la République : 1971, 1973, 1976...</p>
+      </div>
+    </div>
+  
+    <div class="timeline-event">
+      <div class="event-circle" >
+        <p style="text-align: center; margin-top: 25px; font-weight: bold;">2025</p>
+      </div>
+      <div class="event-content">
+        <h3>1972</h3>
+        <p >🏆 Championnat national : 1972, 1975, 1976...</p>
+      </div>
+    </div>
+    
+    <div class="timeline-event">
+      <div class="event-circle">  <p style="text-align: center; margin-top: 25px; font-weight: bold;">2026</p></div>
+      <div class="event-content">
+        <h3>2006</h3>
+        <p>🏆 Nouvelle victoire historique.</p>
+      </div>
+    </div>
+  </div>
+    
+    <footer>
+      © 2024 PhoneShop
+      . Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a>
+    </footer>
+  <script src="script.js"></script>
+</body>
+<script src="./javascript/historique.js"></script>
+</html>
