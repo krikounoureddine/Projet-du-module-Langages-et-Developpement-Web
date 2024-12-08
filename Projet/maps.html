@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcul de trajet avec itineraire rouge</title>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 60vh;
+      width: 100%;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .controls {
+      margin-bottom: 10px;
+    }
+    input, select, button {
+      margin-right: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Calcul de trajet avec itineraire rouge</h2>
+  <div class="controls">
+    <label for="start">Départ : </label>
+    <input id="start" type="text" placeholder="ex: Strasbourg Saint Denis" value="2.3539,48.8686">
+    
+    <label for="end">Arrivee : </label>
+    <input id="end" type="text" placeholder="ex: babrebs rechechoir" value="2.3499,48.8835">
+
+    <label for="mode">Mode : </label>
+    <select id="mode">
+      <option value="driving-car">Voiture</option>
+      <option value="cycling-regular">Velo</option>
+      <option value="foot-walking">Marche</option>
+    </select>
+
+    <button onclick="calculateRoute()">Rechercher</button>
+  </div>
+
+  <div id="map"></div>
+  <p id="result"></p>
+
+  <script>
+    const map = L.map("map").setView([48.8566, 2.3522], 13);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    
+    let routeLayer;
+    async function calculateRoute() {
+      const apiKey = "macle_de_projet_phone_shop"; 
+      const start = document.getElementById("start").value; 
+      const end = document.getElementById("end").value;    
+      const mode = document.getElementById("mode").value;   
+      const url = `https://api.openrouteservice.org/v2/directions/${mode}?api_key=${apiKey}&start=${start}&end=${end}`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        
+        const coordinates = data.features[0].geometry.coordinates.map(([lng, lat]) => [lat, lng]);
+        if (routeLayer) {
+          map.removeLayer(routeLayer);
+        }
+        routeLayer = L.polyline(coordinates, {
+          color: "red",  
+          weight: 8,      
+          opacity: 0.8    
+        }).addTo(map);
+
+        map.fitBounds(routeLayer.getBounds()); 
+
+        const duration = data.features[0].properties.segments[0].duration; 
+        const minutes = Math.round(duration / 60); 
+        document.getElementById("result").innerText = `temps estime : ${minutes} minutes en ${mode.replace('-', ' ')}`;
+      } catch (error) {
+        console.error("Erreur lors de la recuperation:", error);
+        document.getElementById("result").innerText = "Erreur : Impossible de calculer intiniraire.";
+      }
+    }
+  </script>
+</body>
+</html>
