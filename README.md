@@ -1,23 +1,40 @@
-# Présentation du Projet
+# PhoneShop - Site de Vente de Téléphones en Ligne
 
-## PhoneShop - Site de Vente de Téléphones
-Présenter par krikou nourddine et mokrani islam
-### Description
-PhoneShop est une plateforme en ligne dédiée à l'achat de téléphones mobiles et d'accessoires. Le site permet aux utilisateurs de parcourir un catalogue de produits, de filtrer les téléphones par marque et caractéristiques, et de passer des commandes en ligne.
+**Présenté par Krikou Nourddine et Mokrani Islam**
 
-### Fonctionnalités (objectifs à atteindre)
-- **Authentification** : Afin de finaliser l'achat ou de passer une commande, l'utilisateur devra s'authentifier de manière sécurisée. Dans le cas où l'utilisateur ne dispose pas de compte, une inscription lui sera demandée.
-- **Sécurité des mots de passe (hashage et cryptage)** : Implémenter des algorithmes de hashage pour crypter les mots de passe et ajouter des tokens pour assurer la sécurité de la circulation de l'information.
-- **Animations** : Ajouter des effets d'animation pour offrir une bonne expérience utilisateur.
-- **Panier d'achat** : Implémenter un panier d'achat qui regroupera les différents articles avant l'achat.
-- **Parcourir les téléphones** : Affichage d'un catalogue de téléphones mobiles qui affichera les différents modèles disponibles dans la base de données.
-- **Filtrer les produits** : Filtrage par marque, prix et caractéristiques techniques (stockage, taille, couleur, caméra, etc.).
+## Description
+
+PhoneShop est une plateforme de vente en ligne innovante dédiée aux téléphones mobiles et accessoires. En plus de l'achat classique, le site propose une expérience immersive avec des technologies avancées telles que la **réalité augmentée 3D**, la **recherche vocale**, et la **géolocalisation** pour optimiser l'achat et la collecte des produits en magasin. Les utilisateurs peuvent visualiser les produits en 3D, rechercher par voix, et trouver les magasins les plus proches pour récupérer leurs achats.
+
+## Fonctionnalités
+
+### Fonctionnalités principales
+- **Réalité Augmentée 3D** : Visualisation des produits en **3D** avec des fichiers **GLTF** créés avec Blender pour une immersion complète dans les produits.
+- **Recherche vocale** : Recherche de produits via des commandes vocales pour une navigation plus intuitive.
+- **Géolocalisation et récupération en magasin** : Calcul du trajet le plus court vers les magasins physiques proches pour récupérer les produits, avec estimation du temps de trajet.
+- **Panier d'achat** : Ajout, modification, et suppression de produits dans le panier avant de finaliser la commande.
 
 ### Fonctionnalités additionnelles
-- **Gestion des comptes acheteur et vendeur** : Créer une distinction entre les différents profils d'utilisateur pour assurer une séparation claire des fonctions.
+- **Gestion des comptes** : Création de profils distincts pour les acheteurs et les vendeurs pour gérer les transactions et les interactions.
 
-### Design de pattern utilisé
-- **MVC (Modèle-Vue-Contrôleur)** : Ce design pattern permet de séparer la logique de l'application (Modèle), la présentation des données (Vue) et la gestion des interactions de l'utilisateur (Contrôleur).
+## Design de pattern utilisé
+- **MVC (Modèle-Vue-Contrôleur)** : Séparation de la logique de l'application (Modèle), de la présentation des données (Vue) et de la gestion des interactions utilisateur (Contrôleur).
+- **Responsivité** : Le site est conçu pour être entièrement responsive et optimisé pour les appareils mobiles, garantissant une expérience fluide pour tous les utilisateurs.
+
+## Technologies utilisées
+- **Frontend** : HTML, CSS, JavaScript,
+- **Backend** : javascipt, Express
+- **Base de données** : mysql
+- **Réalité augmentée** : Blender pour les modèles 3D, format GLTF
+- **Géolocalisation** : APIs openstreetmap 
+- **Recherche vocale** : reconnaissance vocal SpeechRecognition
+
+## Installation
+
+Clonez ce projet sur votre machine locale :
+
+```bash
+git clone https://github.com/krikounoureddine/Projet-du-module-Langages-et-Developpement-Web.git
 
 ## Formulaire
 
