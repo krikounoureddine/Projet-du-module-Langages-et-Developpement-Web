@@ -35,7 +35,7 @@ Clonez ce projet sur votre machine locale :
 
 ```bash
 git clone https://github.com/krikounoureddine/Projet-du-module-Langages-et-Developpement-Web.git
-
+```
 ## Formulaire
 
 Pour remplir le formulaire, [cliquez ici](https://docs.google.com/forms/d/e/1FAIpQLScCpb0oUcjKjKOS3jqYVUL2JjcRk41NjudZenlLXVeQymFDgw/viewform?usp=sf_link).
@@ -47,3 +47,4 @@ https://docs.google.com/forms/d/e/1FAIpQLScCpb0oUcjKjKOS3jqYVUL2JjcRk41NjudZenlL
 ### QR code du formulaire :
 
  ![image alt](https://github.com/krikounoureddine/Projet-du-module-Langages-et-Developpement-Web/blob/main/qrcode.png)
+
