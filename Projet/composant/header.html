@@ -1,0 +1,27 @@
+<div class="header-container">
+    <div class="header-logo"><a href="index.html" style="color: white; text-decoration: none;">PhoneShop</a></div>
+    <button id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav>
+        <ul class="header-nav">
+            <li><a href="index.html">Qui nous sommes</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="cart-container">
+                <span class="cart-count"></span>
+                <i class="fa-solid fa-cart-arrow-down"></i>
+            </li>
+            <div class="search-container">
+                <form action="{{ url_for('search') }}" method="POST" onsubmit="return validateInput()">
+                   
+                    <input type="text" name="query" id="search-input" placeholder="Rechercher..." maxlength="50" required>
+                    <button type="button" id="voice-btn" onclick="startRecognition()">🎤</button>
+                    <button type="submit" id="search-button">🔍</button>
+                 
+                </form>
+            </div>
+
+        </ul>
+    </nav>
+</div>
+

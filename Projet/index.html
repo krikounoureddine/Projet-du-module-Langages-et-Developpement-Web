@@ -4,41 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections</title>
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">
-                <a href="index.html">PhoneShop</a>
-            </div>
-            <ul>
-                <li><a href="historiques.html">Historiques</a></li>
-                <li><a href="index.html" class="active">Collections</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="search-container">
-            <form action="{{ url_for('search') }}" method="POST" onsubmit="return validateInput()">
-               
-                <input type="text" name="query" id="search-input" placeholder="Rechercher..." maxlength="50" required>
-                <button type="button" id="voice-btn" onclick="startRecognition()">🎤</button>
-                <button type="submit" id="search-button">🔍</button>
-             
-            </form>
-        </div>
-    </header>
+    <header ></header>
 
     <main class="collection-main">
         <h1 style="margin-left:1%;">   Explorez notre collections de téléphone</h1>
         <p class="text">Plongez dans une expérience unique de shopping : explorez nos téléphones en 3D et utilisez la recherche vocale pour trouver votre appareil idéal en un instant !</p>
         <div class="filter-buttons">
-            <button onclick="filterResources('audio')">Audios</button>
-            <button onclick="filterResources('video')">Vidéos</button>
-            <button onclick="filterResources('image')">Images</button>
-            <button onclick="filterResources('livre')">Livres</button>
-            <button onclick="filterResources('revue')">Revues</button>
+            <button onclick="filterResources('audio')">Trier</button>
         </div>
       
     <section class="product-container" id="product-container">
@@ -55,8 +33,10 @@
         © 2024 PhoneShop
         . Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a>
      </footer>
+    
      <script src="./javascript/index.js"></script>
- 
+     
+     <script src="./javascript/loader.js"></script>
 </body>
 </html>
    
