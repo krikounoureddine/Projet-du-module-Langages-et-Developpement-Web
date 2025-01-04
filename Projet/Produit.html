@@ -28,7 +28,7 @@
           <div class="product-details" style="top : 0">
             <div style="display: flex;  align-items: flex-start; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
               <div>
-                  <h1 style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 10px;">Iphone Phone 14 128 Go - Minuit - Débloqué</h1>
+                  <h1 style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 10px;" id="titre">Iphone Phone 14 128 Go - Minuit - Débloqué</h1>
                   
                   <div style="margin-bottom: 10px;">
                       <span style="color: #ff9800;">&#9733;</span>
@@ -39,12 +39,12 @@
                       <p style="font-size: 14px; color: #777;">4,4/5 (3 627 avis)</p>
                   </div>
           
-                  <p style="font-size: 20px; font-weight: bold; color: #28a745; margin-bottom: 5px;">515,00 €</p>
-                  <p><del style="color: #888; font-size: 16px;">749,00 € neuf</del></p>
-                  <p style="color: #dc3545; font-weight: bold; font-size: 16px; margin-bottom: 10px;">Économisez 234,00 €</p>
+                  <p style="font-size: 20px; font-weight: bold; color: #28a745; margin-bottom: 5px;" id="prix">515,00 €</p>
+                  <p><del style="color: #888; font-size: 16px;" id="ancienprix">749,00 € neuf</del></p>
+                  <p style="color: #dc3545; font-weight: bold; font-size: 16px; margin-bottom: 10px;" id="economie">Économisez 234,00 €</p>
                   
                   <p style="font-size: 14px; color: #333; margin-bottom: 15px;">
-                      Payer en 3 versements de <strong>171,66 €</strong>, sans frais. 
+                      Payer en 3 versements de <strong id="tranche">171,66 €</strong>, sans frais. 
                       <a href="#" style="color: #007bff; text-decoration: none;">En savoir plus</a>
                   </p>
                   
@@ -76,7 +76,7 @@
       <p>Contact us at <a href="mailto:contact@onlinestore.com">contact@onlinestore.com</a></p>
     </div>
   </footer>
-
+    <script src="./OmekaApi/OmekaProduitById.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
    <script src="./javascript/maps.js"></script>
    <script type="module" src="./javascript/ar.js"></script>
