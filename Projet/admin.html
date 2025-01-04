@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>admin</title>
 </head>
@@ -22,16 +23,13 @@
         <div id="product-form" class="form-container">
             <h2>Ajouter un Produit</h2>
             <form id="productForm">
-                <input type="text"  name="productName" id="productName" placeholder="Nom du Produit" required>
-                <input type="number" name="quantity" id="quantity" placeholder="Quantité" required>
-                <select name="category" id="category">
-                    <option value="smartphones">Smartphone</option>
-                    <option value="tablets">Tablette</option>
-                    <option value="laptops">Laptop</option>
-                </select>
-               <!-- <textarea id="message" name="message" rows="4" style="width: 340px;" placeholder="La description du produit ici..."></textarea>-->
-                <input type="file" id="productImage" name="productImage" accept="image/*" required>
-                <button type="submit">Ajouter Produit</button>
+              <input type="text" name="productName" id="productName" placeholder="Nom du Produit" required>
+              <input type="text" name="description" id="description" placeholder="Description du Produit" required>
+              <input type="number" name="price" id="price" placeholder="Prix" required>
+              <input type="number" name="quantity" id="quantity" placeholder="Quantité" required>
+              <input type="text" name="path_folder" id="path_folder" placeholder="Chemin de l'image" required>
+              <button type="submit">Ajouter Produit</button>
+            
             </form>
         </div>
 
@@ -60,11 +58,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Nom du Produit</th>
-                    <th>Quantité</th>
-                    <th>Catégorie</th>
+                    <th>description</th>
                     <th>Prix</th>
-                    <th>Avis</th>
-                    <th>path_folder 3D</th>
+                    <th>path_folder</th>
                     <th></th>
                 </tr>
             </thead>
@@ -75,7 +71,10 @@
     </div>
 
     </div>
+    <script src="./OmekaApi/OmekaAdmin.js"> </script>
     <script src="./javascript/adminloader.js"></script>
+    <script src="./javascript/admin.js"></script>
+    
 </body>
 </html>
 
