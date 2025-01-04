@@ -1,7 +1,9 @@
 # PhoneShop - Site de Vente de Téléphones en Ligne
 
 **Présenté par Krikou Nourddine et Mokrani Islam**
+
 ![omeka s](https://github.com/user-attachments/assets/c75e0560-4591-494e-b534-df2872aeb105)
+
 ## Description
 
 PhoneShop est une plateforme de vente en ligne innovante dédiée aux téléphones mobiles et accessoires. En plus de l'achat classique, le site propose une expérience immersive avec des technologies avancées telles que la **réalité augmentée 3D**, la **recherche vocale**, et la **géolocalisation** pour optimiser l'achat et la collecte des produits en magasin. Les utilisateurs peuvent visualiser les produits en 3D, rechercher par voix, et trouver les magasins les plus proches pour récupérer leurs achats.
