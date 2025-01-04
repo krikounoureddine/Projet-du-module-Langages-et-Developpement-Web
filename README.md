@@ -6,7 +6,10 @@
 
 ## Description
 
-PhoneShop est une plateforme de vente en ligne innovante dédiée aux téléphones mobiles et accessoires. En plus de l'achat classique, le site propose une expérience immersive avec des technologies avancées telles que la **réalité augmentée 3D**, la **recherche vocale**, et la **géolocalisation** pour optimiser l'achat et la collecte des produits en magasin. Les utilisateurs peuvent visualiser les produits en 3D, rechercher par voix, et trouver les magasins les plus proches pour récupérer leurs achats.
+ **PhoneShop ** est une plateforme de vente en ligne innovante dédiée aux téléphones mobiles et accessoires. En plus de l'achat classique, le site propose une expérience immersive grâce à des technologies avancées telles que la  **réalité augmentée 3D **,  **la recherche vocale ** et la  **géolocalisation ** pour optimiser l'achat et la collecte des produits en magasin. Ce qui distingue PhoneShop, c'est l'intégration d'appels à l'API Omeka S au lieu d'utiliser une base de données traditionnelle. Chaque requête vers Omeka S est sécurisée grâce à une clé d'authentification et un identifiant unique, garantissant une gestion rapide et fiable des 
+données.
+
+L'approche basée sur Omeka S offre une flexibilité accrue pour organiser et afficher les données tout en optimisant la gestion des ressources numériques.
 
 ## Fonctionnalités
 
@@ -25,11 +28,12 @@ PhoneShop est une plateforme de vente en ligne innovante dédiée aux téléphon
 
 ## Technologies utilisées
 - **Frontend** : HTML, CSS, JavaScript,
-- **Backend** : javascipt, Express
-- **Base de données** : mysql
-- **Réalité augmentée** : Blender pour les modèles 3D, format GLTF
+- **Backend** : Javascript,fetch 
+- **Récupération des Données** : API OMEKA S
+- **Réalité augmentée** : Blender pour les modèles 3D, format GLTF,three js
 - **Géolocalisation** : APIs openstreetmap 
 - **Recherche vocale** : reconnaissance vocal SpeechRecognition
+
 
 ## Installation
 
