@@ -6,10 +6,10 @@
 
 ## Description
 
- **PhoneShop ** est une plateforme de vente en ligne innovante dédiée aux téléphones mobiles et accessoires. En plus de l'achat classique, le site propose une expérience immersive grâce à des technologies avancées telles que la  **réalité augmentée 3D **,  **la recherche vocale ** et la  **géolocalisation ** pour optimiser l'achat et la collecte des produits en magasin. Ce qui distingue PhoneShop, c'est l'intégration d'appels à l'API Omeka S au lieu d'utiliser une base de données traditionnelle. Chaque requête vers Omeka S est sécurisée grâce à une clé d'authentification et un identifiant unique, garantissant une gestion rapide et fiable des 
+ **PhoneShop** est une plateforme de vente en ligne innovante dédiée aux téléphones mobiles et accessoires. En plus de l'achat classique, le site propose une expérience immersive grâce à des technologies avancées telles que la  **réalité augmentée 3D**,  **la recherche vocale** et la  **géolocalisation** pour optimiser l'achat et la collecte des produits en magasin. Ce qui distingue PhoneShop, c'est l'intégration d'appels à l'API Omeka S au lieu d'utiliser une base de données traditionnelle. Chaque requête vers Omeka S est sécurisée grâce à une clé d'authentification et un identifiant unique, garantissant une gestion rapide et fiable des 
 données.
 
-L'approche basée sur Omeka S offre une flexibilité accrue pour organiser et afficher les données tout en optimisant la gestion des ressources numériques.
+L'approche basée sur **Omeka S** offre une flexibilité accrue pour organiser et afficher les données tout en optimisant la gestion des ressources numériques.
 
 ## Fonctionnalités
 
